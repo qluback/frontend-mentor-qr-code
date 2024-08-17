@@ -1,0 +1,96 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: hsl(212, 45%, 89%);
+  font-family: "Outfit";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 320px;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.qr-code-container {
+  background: #2c7dfa;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1;
+  border-radius: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qr-code-circle {
+  display: inline-block;
+  height: 250px;
+  width: 250px;
+  border-radius: 9999px;
+  background: #3685ff;
+  position: absolute;
+}
+
+#circle-top {
+  top: -100px;
+  left: -100px;
+  animation: loop-top 15s ease-in-out infinite;
+}
+
+#circle-bottom {
+  bottom: -170px;
+  right: -100px;
+  animation: loop-bottom 15s ease-in-out infinite;
+}
+
+.qr-code-container img {
+  width: 60%;
+  z-index: 1;
+  filter: invert(1);
+}
+
+h1 {
+  font-weight: bold;
+  color: hsl(218, 44%, 22%);
+}
+
+p {
+  color: hsl(216, 15%, 48%);
+  margin-top: 0;
+}
+
+@keyframes loop-top {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translate(10px, 10px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes loop-bottom {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translate(20px, 10px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
