@@ -12,7 +12,7 @@ body {
   align-items: center;
 }
 
-section {
+main {
   background: white;
   display: flex;
   flex-direction: column;
